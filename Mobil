@@ -1,0 +1,27 @@
+public class Mobil extends Kendaraan {
+    private int jumlahPenumpang;
+    public Mobil() {
+        super(); 
+        this.jumlahPenumpang = 4;
+    }
+
+    public Mobil(String nama, int kecepatan, int jumlahPenumpang) {
+        super(nama, kecepatan); 
+        this.jumlahPenumpang = jumlahPenumpang;
+    }
+
+  
+    public int getJumlahPenumpang() {
+        return jumlahPenumpang;
+    }
+
+    public void setJumlahPenumpang(int jumlahPenumpang) {
+        this.jumlahPenumpang = jumlahPenumpang;
+    }
+
+    
+    @Override
+    public void berjalan() {
+        System.out.println(getNama() + " (mobil) berjalan dengan kecepatan " + getKecepatan() + " km/jam, membawa " + jumlahPenumpang + " penumpang.");
+    }
+}
